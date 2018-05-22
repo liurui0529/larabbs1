@@ -13,10 +13,10 @@
                     <div class="media-body">
                         <hr>
                         <h4><strong>个人简介</strong>-{{ $user->name }}</h4>
-                        <p>格言：我就是我，不一样的烟火</p>
+                        <p>{{ $user->introduction }}</p>
                         <hr>
-                        <span>注册于：{{ $user->created_at }}</span><br>
-                        <span>最后更新于： {{ $user->updated_at }}</span>
+                        <span>注册于：{{ $user->created_at->diffForHumans() }}</span><br>
+                        <span>最后更新于： {{ $user->updated_at->diffForHumans() }}</span>
                     </div>
                 </div>
             </div>
